@@ -1,64 +1,56 @@
 # Smart City Traffic Analysis
 
-## Project Overview
-This project demonstrates a simple yet valuable **traffic analysis workflow** using synthetic data. The goal is to analyze traffic congestion based on various factors like time of day, weather, location, and accidents. The project includes data generation, model training, and visualizations, making it suitable for portfolio and beginner-friendly.
+## Overview
 
----
+A beginner-friendly **traffic congestion analysis project** using synthetic smart city data. The project covers data generation, machine learning modeling, and visualization to demonstrate a complete data analysis workflow suitable for portfolios.
 
-## Steps
+## Dataset
 
-### Step 1: Data Generation
-- Generated a **synthetic dataset** of 1000 rows.
-- Columns included:
-  - `Timestamp` — date and time of observation
-  - `Latitude` & `Longitude` — location coordinates
-  - `Traffic_Volume` — number of vehicles observed
-  - `Weather` — weather condition (Clear, Rainy, Foggy)
-  - `Accidents` — number of accidents recorded
-  - `Congestion` — binary target (0 = low, 1 = high)
-- Data saved as `smart_city_traffic_synthetic.csv`.
+* **Type:** Synthetic traffic data (1000 records)
+* **Source (Kaggle):** [https://www.kaggle.com/datasets/zainlatif/trafic-data-smart-city](https://www.kaggle.com/datasets/zainlatif/trafic-data-smart-city)
+* **Key Features:**
 
-### Step 2: Data Overview
-- Inspected dataset shape, data types, null values, and unique values.
-- Verified all columns are complete and ready for modeling.
+  * Timestamp, Latitude, Longitude
+  * Traffic Volume
+  * Weather (Clear, Rainy, Foggy)
+  * Accidents
+  * Congestion (0 = Low, 1 = High)
 
-### Step 3: Model Training
-- Trained a **Random Forest Classifier** to predict traffic congestion.
-- Features used: `Hour` (from Timestamp), `Weather`, `Latitude`, `Longitude`, `Traffic_Volume`, `Accidents`.
-- Achieved **100% accuracy** on the synthetic dataset (expected for controlled data).
-- Feature importance revealed `Traffic_Volume` and `Hour` as the most influential.
+## Workflow
 
-### Step 4: Visualization
-- Visualized **feature importance**, **actual vs predicted congestion**, and **traffic volume vs congestion** using Matplotlib and Seaborn.
-- These visualizations help understand model predictions and traffic patterns.
+1. **Data Preparation** – Generated and validated a clean dataset.
+2. **Feature Engineering** – Extracted `Hour` from timestamp and encoded weather.
+3. **Modeling** – Trained a **Random Forest Classifier** to predict congestion.
+4. **Evaluation** – Achieved 100% accuracy (expected due to controlled synthetic data).
+5. **Visualization** – Feature importance and traffic–congestion relationships.
 
----
+## Tools & Tech
 
-## Future Work: Power BI Dashboard
-- Plan to create an **interactive Power BI dashboard**.
-- Features to include:
-  - Traffic volume trends by hour/day
-  - Congestion heatmaps by location
-  - Weather impact analysis
-  - Accident hotspot analysis
-- Users will be able to **explore traffic patterns interactively**.
+* Python, Pandas, NumPy
+* Scikit-learn
+* Matplotlib, Seaborn
 
----
+## Future Work
 
-## Files in Repository
-- `smart_city_traffic_synthetic.csv` — synthetic dataset
-- `Smart_City_Traffic_Analysis.ipynb` — Jupyter Notebook with code
-- `README.md` — project description
+* Interactive **Power BI dashboard**:
 
----
+  * Hourly traffic trends
+  * Congestion heatmaps
+  * Weather & accident impact analysis
+
+## Repository Files
+
+* `smart_city_traffic_synthetic.csv`
+* `Smart_City_Traffic_Analysis.ipynb`
+* `README.md`
 
 ## How to Run
-1. Clone the repository.
-2. Open the Jupyter Notebook `Smart_City_Traffic_Analysis.ipynb`.
-3. Run all cells to generate visualizations and train the model.
-4. Explore the dataset for further analysis or future Power BI integration.
 
----
+1. Clone the repo.
+2. Open `Smart_City_Traffic_Analysis.ipynb`.
+3. Run all cells.
 
 ## Author
-**Zain Latif** — [GitHub](https://github.com/zainlatif)
+
+**Zain Latif**
+GitHub: [https://github.com/zainlatif](https://github.com/zainlatif)
